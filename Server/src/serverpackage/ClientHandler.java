@@ -27,6 +27,9 @@ public class ClientHandler implements Runnable {
 		String request;
 		String send;
 		
+		RecievePing myrunnable = new RecievePing(in);
+		new Thread(myrunnable).start();
+		
 		try {
 			
 			
@@ -46,8 +49,8 @@ public class ClientHandler implements Runnable {
 				if(send.equals("quit")) break;
 				out.println(send);
 				out.flush();
-				request = in.readLine().toString();
-				System.out.println(request);
+				/*request = in.readLine().toString();
+				System.out.println(request);*/
 				}
 				
 				
@@ -89,5 +92,7 @@ public class ClientHandler implements Runnable {
 		}
 		
 }
+
+
 	
 
