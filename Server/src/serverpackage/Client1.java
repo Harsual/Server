@@ -22,6 +22,8 @@ public static void main(String args[]) throws IOException{
 	PrintWriter out = new PrintWriter(socket.getOutputStream(),true);
 	
 	while(true) {
+		
+		
 	System.out.println("> ");
 	String command = keyboard.readLine();
 	
@@ -31,6 +33,7 @@ public static void main(String args[]) throws IOException{
 	
 	String serverResponse = input.readLine();
 	System.out.println("Server says: " + serverResponse);
+	System.out.println(" ");
 	
 	}
 	
